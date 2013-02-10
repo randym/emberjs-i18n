@@ -7,8 +7,6 @@
 # when it is changed translations are automatically reloaded.
 I18nBoundView = Ember.View.extend Ember._Metamorph, {
 
-  templateName: 'i18nBoundView'
-
   key: null,
 
   valueDidChange: ->

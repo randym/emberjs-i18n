@@ -1,6 +1,5 @@
-
+public/scripts/
+tmp/
 # .github-upload-token stores OAuth token, used by github_downloads gem
 .github-upload-token
 
-# tokeny for localeapp
-#
