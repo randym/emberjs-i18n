@@ -1,1 +1,0 @@
-minispade.register('views', "(function() {(function() {\nminispade.require('views/application');\nminispade.require('views/header');\nminispade.require('views/locale_selector');\n\n}).call(this);\n\n})();\n//@ sourceURL=views");

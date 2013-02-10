@@ -1,1 +1,0 @@
-Ember.TEMPLATES['application']=Ember.Handlebars.compile("{{view EmberjsI18n.HeaderView}}\n{{view EmberjsI18n.LocaleSelectorView}}\n");

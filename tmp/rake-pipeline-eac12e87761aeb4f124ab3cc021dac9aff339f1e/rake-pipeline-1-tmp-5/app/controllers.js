@@ -1,1 +1,0 @@
-minispade.register('controllers', "(function() {(function() {\nminispade.require('helpers');\nminispade.require('controllers');\n\n}).call(this);\n\n})();\n//@ sourceURL=controllers");

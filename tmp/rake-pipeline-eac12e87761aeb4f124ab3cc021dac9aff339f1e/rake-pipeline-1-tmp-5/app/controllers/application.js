@@ -1,1 +1,0 @@
-minispade.register('controllers/application', "(function() {(function() {\n\n  EmberjsI18n.reopen({\n    ApplicationController: EmberjsI18n.Controller.extend()\n  });\n\n}).call(this);\n\n})();\n//@ sourceURL=controllers/application");
