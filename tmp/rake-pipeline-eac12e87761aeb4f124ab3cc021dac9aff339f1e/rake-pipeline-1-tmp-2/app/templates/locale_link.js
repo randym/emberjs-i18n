@@ -1,0 +1,1 @@
+Ember.TEMPLATES['locale_link']=Ember.Handlebars.compile("<a>{{view.content.label}}</a>\n");

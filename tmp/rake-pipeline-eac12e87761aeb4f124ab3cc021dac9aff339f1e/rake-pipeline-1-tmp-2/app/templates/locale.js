@@ -1,0 +1,1 @@
+Ember.TEMPLATES['locale']=Ember.Handlebars.compile("<div id=\"top_hidden_menu\">\n  <div id=\"language_selector\">\n    <div>\n      {{t select_locale }}\n    </div>\n    <ul>\n      {{#view EmberjsI18n.LocaleView}}\n        {{#each view.locales}}\n          {{locale_link this.key}}\n        {{/each}}\n      {{/view}}\n    </ul>\n  </div>\n</div>\n\n");

@@ -1,0 +1,1 @@
+minispade.register('data-store', "(function() {(function() {\n\n\n\n}).call(this);\n\n})();\n//@ sourceURL=data-store");

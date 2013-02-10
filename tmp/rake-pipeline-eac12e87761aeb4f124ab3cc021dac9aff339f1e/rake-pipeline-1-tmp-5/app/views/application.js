@@ -1,0 +1,1 @@
+minispade.register('views/application', "(function() {(function() {\n\n  this.EmberjsI18n.reopen({\n    ApplicationView: Em.View.extend()\n  });\n\n}).call(this);\n\n})();\n//@ sourceURL=views/application");

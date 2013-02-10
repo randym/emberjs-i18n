@@ -1,0 +1,1 @@
+minispade.register('helpers', "(function() {(function() {\nminispade.require('helpers/handlebars');\n\n}).call(this);\n\n})();\n//@ sourceURL=helpers");

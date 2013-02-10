@@ -1,0 +1,62 @@
+require 'rake-pipeline-web-filters'
+require 'rake-pipeline-i18n-filters'
+
+output 'assets/scripts/config'
+input 'locales' do
+  match '**/*.yml' do
+    i18n_js { 'locales.js' }
+  end
+end
+
+output 'public/scripts'
+input 'assets/scripts' do
+  match '**/*.hbs' do
+    handlebars
+    concat 'templates.js'
+  end
+
+  match '**/*.coffee' do
+    coffee_script
+  end
+
+  match 'vendor/**/*.js' do
+    concat %w(jquery.min minispade handlebars ember ember-data).map { |file|
+"vendor/#{file}.js" }, 'vendor.js'
+  end
+
+  match %r(^(?!vendor|spec).*\.js$) do
+    modules = proc { |input| input.path.gsub(%r((^app/|lib/|\.js$)), '') }
+    minispade(string: true, rewrite_requires: true, module_id_generator: modules)
+  end
+
+  match %r(^(?!spec).*\.js$) do
+    concat ['vendor.js'], ['app.js', 'min/app.js']
+  end
+end
+
+output 'public/styles'
+input 'assets/styles' do
+  match '**/*.{scss,sass,css}' do
+    sass
+    concat [], 'app.css'
+  end
+end
+input 'assets/styles' do
+  match '**/*.css' do
+    concat ['bootstrap-responsive.css'], 'bootstrap.css'
+  end
+end 
+output 'public/images'
+input 'assets/images' do
+  skip %r(^ui/)
+  match '**/*' do
+    copy
+  end
+end
+
+output 'public'
+input 'assets/static' do
+  match '**/*' do
+    copy
+  end
+end

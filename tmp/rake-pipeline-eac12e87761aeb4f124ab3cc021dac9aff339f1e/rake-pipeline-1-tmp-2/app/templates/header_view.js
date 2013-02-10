@@ -1,0 +1,1 @@
+Ember.TEMPLATES['header_view']=Ember.Handlebars.compile("<div class=\"header navbar navbar-inverse navbar-fixed-top\">\n  <div class=\"navbar-inner\">\n    <a class=\"brand\">\n      {{t app_name}}\n    </a>\n  </div>\n</div>\n");

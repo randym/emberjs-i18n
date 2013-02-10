@@ -1,0 +1,79 @@
+The first thing is to get the basic setup that we will use 
+for asset management. Let's use the following:
+
+assets
+  images
+  scripts
+    app
+      config - this is where we will drop our i18n-ms locales
+      controllers - emberjs controllers
+        home.coffee - This is where we define our HomeLayoutController
+      helpers - emberjs and handlebars helpers
+        handlebars.coffee - This is where we define our tranlsation helper
+      models - emberjs models
+      templates - emberjs templates
+        layouts
+          home.hbs - The base layout for everything else
+      views - emberjs views
+        application.coffee - The Application view which we connect to layout.
+      app.coffee - manifest that loads the other manifests and handles initialization
+      controllers.coffee - manifest for controllers
+        home.coffe - This is where we declare our home layout controller 
+      helpers.coffee - manifest for helpers
+        manifest for helpers we need to load
+      modles.coffee - manifest for models
+      routes.coffee - defines the emberjs routes in our app. 
+      views.coffee - manifest for views
+        application.coffee - This is where we define our application view. 
+    vendor
+      bootstrap.js - get a copy and put it here
+      minispade.js - get a copy and put it here
+      jquery.min.js - get a copy and put it here
+      ember.js - get a copy of ember.js and put it here
+      handlebars.js - get a copy of handlebars.js and put it here
+      i18n.js - get a copy of i18n.js and put it here
+    emberjs-i18n.coffee - This loads up our emberjs app
+    styles
+      bootstrap.css
+      bootstrap-responsive.css
+locales - this is where the i18n yaml will live
+public - this is where index.html, spec.html and compiled assets live
+  index.html
+  spec.html
+Assetfile - The rake-pipeline asset file
+Gemfile - This is where we specify our ruby dependencies
+Guardfile -  Keeps our assets re-compiling as we make changes
+Rakefile - This is where we will keep our localization updating rake tasks
+README.md - This is where you can find out more about this app.
+
+
+1. Create a Gemfile with
+  An assets group containing
+    rake-pipeline-web-filters
+    rake-pipeline-i18n-filters
+    localeapp-handlebars-i18n
+    coffee-script
+    compas
+    tilt
+    uglifier
+  A developement, test group with
+    rake
+    localeapp
+    handlebars
+    localeapp-handlebars_i18n
+
+`bundle install
+
+Now lets get to work!
+
+Emberjs basics
+  We are not going to do anything fancy with emberjs here because the
+point is to show a localizatoin workflow and how that workflow interacts
+with ember js.
+
+Step 1. 
+#/assets/scripts/app/emberjs_i18n.coffee
+
+Namespace your app and set up a method for updating the application
+locale and I18n-js locale.
+

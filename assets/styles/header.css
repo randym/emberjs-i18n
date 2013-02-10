@@ -1,0 +1,67 @@
+.locale_selector {
+  display: none;
+  background: #3c3d40;
+  margin-left: auto;
+  margin-right: auto;
+}
+#language_selector {
+  padding: 0 20px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url('../images/lang_chooser_bg.png') no-repeat 15px -15px;
+}
+#language_selector {
+  color: #aeaeae;
+  font-size: 12px;
+  padding-left: 400px;
+}
+#language_selector ul {
+  margin-bottom: 10px;
+  padding: 2px 5px 5px;
+  list-style: none;
+}
+#language_selector ul li {
+  list-style: none;
+  display: inline;
+}
+#language_selector ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #dedede;
+  cursor: pointer;
+  margin: 0 10px 0 0;
+}
+
+#language_selector ul li a:hover {
+  color: #FFF;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
+}
+
+.navbar {
+  font-size: 13px;
+}
+
+/* Change the docs' brand */
+.navbar .brand {
+  padding-right: 10;
+  padding-left: 0;
+  margin-left: 20px;
+  float: right;
+  font-weight: bold;
+  color: #555;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+  -webkit-transition: all .2s linear;
+     -moz-transition: all .2s linear;
+          transition: all .2s linear;
+}
+.navbar .brand:hover {
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
+}
+.navbar .current_user {
+  padding-top: 4px;
+  float: right;
+}
+

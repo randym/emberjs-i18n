@@ -1,0 +1,6 @@
+en:
+  locales:
+    en: English
+    ja: 日本語
+  select_locale: Select Locale
+  app_name: Polyglottous Emberjs
